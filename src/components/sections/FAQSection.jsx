@@ -2,47 +2,49 @@ import React from 'react';
 import { Accordion } from '../ui/Accordion';
 import { ScrollReveal } from '../ui/ScrollReveal';
 
+// NLP reframing: cada objeción se convierte en confirmación
+// Breakthrough advertising: handle las 10 objeciones más comunes
 const faqs = [
   {
-    q: "¿Para quién es este protocolo exactamente?",
-    a: "Para personas de 40 años en adelante que tienen diagnóstico de hígado graso (esteatosis hepática), fatiga crónica, inflamación abdominal, o que simplemente no saben qué comer después de que el médico les dijo 'cambiá los hábitos'. No reemplaza el seguimiento médico — es un apoyo nutricional práctico para el día a día."
+    q: "¿Y si todavía no tengo diagnóstico pero me identifico con lo que leí acá?",
+    a: "Es uno de los escenarios más comunes. El hígado graso puede estar presente años antes de aparecer en análisis. Si notás fatiga persistente, hinchazón abdominal, pesadez después de comer o cansancio que no mejora con descanso — esa información es válida. El protocolo está diseñado para personas con diagnóstico confirmado y también para quienes están en ese momento previo de confusión. En cualquier caso, el paso más importante es tener una guía concreta."
   },
   {
-    q: "¿Sirve si tengo hígado graso pero no tengo síntomas graves?",
-    a: "Sí. Muchas personas con hígado graso no tienen dolor fuerte, pero sí fatiga, pesadez post-comida o confusión con la alimentación. El protocolo está pensado exactamente para eso: darte un plan claro antes de que la situación avance."
+    q: "¿Para quién es exactamente este protocolo?",
+    a: "Para personas a partir de los 40 años con diagnóstico de hígado graso (esteatosis hepática), enzimas hepáticas elevadas, o síntomas como fatiga crónica, inflamación abdominal o pesadez post-comida. También para quienes recibieron la indicación médica de 'cambiar la alimentación' sin que nadie les explicara cómo hacerlo en la práctica. No reemplaza el seguimiento médico — es un apoyo nutricional concreto para el día a día."
   },
   {
-    q: "¿Qué pasa si ya probé otras dietas y no funcionaron?",
-    a: "Es lo más común. La mayoría de las dietas no están pensadas específicamente para el hígado graso. NATURALE no es una dieta restrictiva — es un protocolo de 28 días organizado por comidas, con alimentos reales y preparaciones rápidas. La diferencia está en la estructura, no en la restricción."
+    q: "¿Qué pasa si ya probé otras dietas y ninguna me funcionó?",
+    a: "Es lo más frecuente. La mayoría de las dietas no están diseñadas específicamente para el hígado graso. NATURALE no es una dieta restrictiva — es un protocolo de combinaciones alimentarias organizado en 28 días, con alimentos de supermercado y preparaciones rápidas. La diferencia está en la estructura y en el qué combinar, no en la restricción."
   },
   {
-    q: "¿Necesito saber cocinar?",
-    a: "No. Las recetas están explicadas paso a paso, con ingredientes de supermercado y preparaciones de menos de 20 minutos. Si podés hervir agua, podés seguir este protocolo."
+    q: "¿Tengo que saber cocinar?",
+    a: "No. Las recetas están explicadas paso a paso, con ingredientes de supermercado común y preparaciones de menos de 20 minutos. Si podés hervir agua, podés seguir este protocolo. El objetivo es que cocines para toda la familia sin hacer dos platos distintos."
   },
   {
-    q: "¿Puedo usarlo junto con mi familia?",
-    a: "Sí, y eso es una de las ventajas más mencionadas. No cocinás dos veces — toda la familia puede comer lo mismo. Los platos están pensados para ser sabrosos para todos, no solo para quien sigue el protocolo."
+    q: "¿Sirve si también tengo colesterol alto, triglicéridos elevados o prediabetes?",
+    a: "Sí. El hígado graso frecuentemente coexiste con estas condiciones. La alimentación orientada al hígado tiene impacto positivo en el metabolismo general. El protocolo fue diseñado para personas que muchas veces tienen más de una de estas condiciones juntas. De todos modos, siempre es importante continuar el seguimiento con tu médico."
+  },
+  {
+    q: "¿Puedo seguirlo junto con mi familia?",
+    a: "Sí — y eso es una de las ventajas más mencionadas en las reseñas. No cocinás dos veces ni separás tus comidas del resto. Toda la familia puede comer lo mismo. Los platos están pensados para ser sabrosos para todos, no solo para quien sigue el protocolo."
   },
   {
     q: "¿Cómo recibo el acceso después de comprar?",
-    a: "Apenas se confirma el pago, recibís un email con el acceso. Sin instalaciones, sin descargas complicadas. Funciona desde cualquier dispositivo: celular, tablet o computadora."
+    a: "Apenas se confirma el pago, recibís un email con el acceso completo. Sin instalaciones, sin apps complicadas. Funciona desde cualquier dispositivo: celular, tablet o computadora. Acceso inmediato, 24 horas."
   },
   {
     q: "¿Por cuánto tiempo tengo acceso?",
-    a: "De por vida. Un solo pago, acceso para siempre — incluyendo futuras actualizaciones sin costo adicional."
+    a: "De por vida. Un solo pago, acceso permanente — incluyendo todas las actualizaciones futuras sin costo adicional. No hay suscripción mensual ni cobros ocultos."
   },
   {
-    q: "¿Sirve si también tengo colesterol alto, triglicéridos elevados o diabetes?",
-    a: "Sí. La guía fue diseñada para personas que frecuentemente tienen más de una de estas condiciones juntas. La alimentación orientada al hígado graso suele tener impacto positivo en estas otras áreas también. De todos modos, siempre recomendamos seguir la guía de tu médico."
+    q: "¿Por qué cuesta solo $17.99 si tiene tanto contenido?",
+    a: "Porque el objetivo es que el precio no sea el obstáculo entre vos y un plan claro. Una consulta con un especialista puede costar más de $150. Este protocolo no reemplaza esa consulta — la complementa con instrucciones prácticas diarias que el médico generalmente no tiene tiempo de darte. $17.99 es una inversión accesible con garantía de 30 días. El riesgo es nuestro."
   },
   {
-    q: "¿Y si compro y no me convence?",
-    a: "Tenés 30 días para pedir el reembolso completo, sin preguntas. La garantía es procesada directamente por Hotmart, la plataforma de pago. Riesgo cero para vos."
+    q: "¿Y si lo compro y no me convence?",
+    a: "Tenés 30 días para pedir el reembolso completo, sin preguntas. Escribís a Hotmart, la plataforma de pago, y el proceso es directo. Conservás todo el material. No existe ningún riesgo para vos en probarlo."
   },
-  {
-    q: "¿Puedo acceder desde cualquier país de América Latina?",
-    a: "Sí. Es 100% digital y funciona desde cualquier país, en cualquier momento, sin restricciones geográficas."
-  }
 ];
 
 export const FAQSection = () => (
@@ -53,7 +55,12 @@ export const FAQSection = () => (
           <span className="font-mono-data text-[10px] font-medium uppercase tracking-[0.25em] text-[#CC5833] mb-3 block">
             PREGUNTAS FRECUENTES
           </span>
-          <h2 className="font-editorial text-3xl md:text-4xl font-bold text-[#1A1A1A]">¿Tenés dudas? Acá van las respuestas.</h2>
+          <h2 className="font-editorial text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-3">
+            Si todavía tenés dudas, acá van las respuestas.
+          </h2>
+          <p className="text-sm text-[#6B7260] font-light">
+            Sin rodeos. Sin respuestas de marketing.
+          </p>
         </div>
 
         <div className="border-t border-[#2E4036]/15">
