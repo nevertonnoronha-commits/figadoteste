@@ -238,3 +238,31 @@ a:hover   { transform: translateY(-1px); }
   background: rgba(204,88,51,0.2);
   color: var(--charcoal);
 }
+
+/* ── Reviews Carousel Infinito ───────────────────────────────── */
+@keyframes scroll-reviews {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.reviews-carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 12px 24px;
+  animation: scroll-reviews 50s linear infinite;
+  will-change: transform;
+}
+
+.reviews-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-carousel-card {
+  width: 340px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .reviews-carousel-card { width: 290px; }
+}

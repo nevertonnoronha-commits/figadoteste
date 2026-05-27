@@ -52,8 +52,8 @@ export const GuaranteeSection = () => (
               <p className="text-sm md:text-base text-[#6B7260] font-light leading-relaxed mb-3">
                 Probá el protocolo durante 30 días completos.
                 Seguilo como está indicado. Comé con tu familia.
-                Si al cabo de ese tiempo no notás ningún cambio en cómo te sentís
-                — o simplemente decidís que no es para vos —
+                Si al cabo de ese tiempo no notás ningún cambio en cómo te sentís,
+                o simplemente decidís que no es para vos,
                 te devolvemos cada centavo.
               </p>
               <p className="text-sm text-[#6B7260] font-light leading-relaxed mb-4">
