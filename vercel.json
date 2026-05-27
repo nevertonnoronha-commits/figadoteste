@@ -2,9 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/pasta1", "destination": "/pasta1/index.html" },
-    { "source": "/pasta2", "destination": "/pasta2/index.html" },
-    { "source": "/pasta3", "destination": "/pasta3/index.html" },
-    { "source": "/pasta4", "destination": "/pasta4/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

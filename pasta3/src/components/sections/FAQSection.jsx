@@ -7,15 +7,15 @@ import { ScrollReveal } from '../ui/ScrollReveal';
 const faqs = [
   {
     q: "¿Y si todavía no tengo diagnóstico pero me identifico con lo que leí acá?",
-    a: "Es uno de los escenarios más comunes. El hígado graso puede estar presente años antes de aparecer en análisis. Si notás fatiga persistente, hinchazón abdominal, pesadez después de comer o cansancio que no mejora con descanso — esa información es válida. El protocolo está diseñado para personas con diagnóstico confirmado y también para quienes están en ese momento previo de confusión. En cualquier caso, el paso más importante es tener una guía concreta."
+    a: "Es uno de los escenarios más comunes. El hígado graso puede estar presente años antes de aparecer en análisis. Si notás fatiga persistente, hinchazón abdominal, pesadez después de comer o cansancio que no mejora con descanso, esa información es válida. El protocolo está diseñado para personas con diagnóstico confirmado y también para quienes están en ese momento previo de confusión. El paso más importante es tener una guía concreta."
   },
   {
     q: "¿Para quién es exactamente este protocolo?",
-    a: "Para personas a partir de los 40 años con diagnóstico de hígado graso (esteatosis hepática), enzimas hepáticas elevadas, o síntomas como fatiga crónica, inflamación abdominal o pesadez post-comida. También para quienes recibieron la indicación médica de 'cambiar la alimentación' sin que nadie les explicara cómo hacerlo en la práctica. No reemplaza el seguimiento médico — es un apoyo nutricional concreto para el día a día."
+    a: "Para personas a partir de los 40 años con diagnóstico de hígado graso (esteatosis hepática), enzimas hepáticas elevadas, o síntomas como fatiga crónica, inflamación abdominal o pesadez post-comida. También para quienes recibieron la indicación médica de 'cambiar la alimentación' sin que nadie les explicara cómo hacerlo en la práctica. No reemplaza el seguimiento médico. Es un apoyo nutricional concreto para el día a día."
   },
   {
     q: "¿Qué pasa si ya probé otras dietas y ninguna me funcionó?",
-    a: "Es lo más frecuente. La mayoría de las dietas no están diseñadas específicamente para el hígado graso. NATURALE no es una dieta restrictiva — es un protocolo de combinaciones alimentarias organizado en 28 días, con alimentos de supermercado y preparaciones rápidas. La diferencia está en la estructura y en el qué combinar, no en la restricción."
+    a: "Es lo más frecuente. La mayoría de las dietas no están diseñadas específicamente para el hígado graso. NATURALE no es una dieta restrictiva. Es un protocolo de combinaciones alimentarias organizado en 28 días, con alimentos de supermercado y preparaciones rápidas. La diferencia está en la estructura y en el qué combinar, no en la restricción."
   },
   {
     q: "¿Tengo que saber cocinar?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "¿Puedo seguirlo junto con mi familia?",
-    a: "Sí — y eso es una de las ventajas más mencionadas en las reseñas. No cocinás dos veces ni separás tus comidas del resto. Toda la familia puede comer lo mismo. Los platos están pensados para ser sabrosos para todos, no solo para quien sigue el protocolo."
+    a: "Sí, y eso es una de las ventajas más mencionadas. No cocinás dos veces ni separás tus comidas del resto. Toda la familia puede comer lo mismo. Los platos están pensados para ser sabrosos para todos, no solo para quien sigue el protocolo."
   },
   {
     q: "¿Cómo recibo el acceso después de comprar?",
@@ -35,11 +35,11 @@ const faqs = [
   },
   {
     q: "¿Por cuánto tiempo tengo acceso?",
-    a: "De por vida. Un solo pago, acceso permanente — incluyendo todas las actualizaciones futuras sin costo adicional. No hay suscripción mensual ni cobros ocultos."
+    a: "De por vida. Un solo pago, acceso permanente. Incluye todas las actualizaciones futuras sin costo adicional. No hay suscripción mensual ni cobros ocultos."
   },
   {
     q: "¿Por qué cuesta solo $17.99 si tiene tanto contenido?",
-    a: "Porque el objetivo es que el precio no sea el obstáculo entre vos y un plan claro. Una consulta con un especialista puede costar más de $150. Este protocolo no reemplaza esa consulta — la complementa con instrucciones prácticas diarias que el médico generalmente no tiene tiempo de darte. $17.99 es una inversión accesible con garantía de 30 días. El riesgo es nuestro."
+    a: "Porque el objetivo es que el precio no sea el obstáculo entre vos y un plan claro. Una consulta con un especialista puede costar más de $150. Este protocolo no reemplaza esa consulta. La complementa con instrucciones prácticas diarias que el médico generalmente no tiene tiempo de darte. $17.99 es una inversión accesible con garantía de 30 días. El riesgo es nuestro."
   },
   {
     q: "¿Y si lo compro y no me convence?",

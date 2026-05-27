@@ -1,21 +1,20 @@
 import React from 'react';
 import { CheckCircle2, ArrowRight, BookOpen, Calendar, ShoppingCart, Leaf, BarChart2 } from 'lucide-react';
 import { ScrollReveal } from '../ui/ScrollReveal';
-import { scrollToOffer } from '../../utils/smoothScroll';
+import { openCheckoutModal } from '../../utils/analytics';
 
-// Mecanismo único + Lollapalooza: cada item amplifica o anterior
 const items = [
   {
     icon: BookOpen,
     tag: 'EL NÚCLEO DEL PROTOCOLO',
-    title: 'Sistema NATURALE — Protocolo Completo de 28 Días',
+    title: 'Sistema NATURALE. Protocolo Completo de 28 Días.',
     body: 'No es una lista de alimentos prohibidos. Es un sistema de combinaciones que reduce la sobrecarga en el hígado sin que tengas que hacer dieta por separado. Comés con tu familia. Comés rico. La diferencia está en el orden y en la combinación.',
     highlight: 'Mecanismo único: Combinación Anti-Sobrecarga Hepática',
   },
   {
     icon: Calendar,
     tag: 'ESTRUCTURA SEMANA A SEMANA',
-    title: 'Plan de Comidas Diario — Las 4 Semanas Organizadas',
+    title: 'Plan de Comidas Diario. Las 4 Semanas Organizadas.',
     body: 'Cada día ya está pensado. Desayuno, almuerzo, merienda y cena. No tenés que decidir nada por la mañana. Abrís el protocolo y sabés exactamente qué preparar. Eso elimina el mayor enemigo: la duda.',
     highlight: 'Sin improvisar. Sin adivinar. Sin culpa.',
   },
@@ -36,7 +35,7 @@ const items = [
   {
     icon: BarChart2,
     tag: 'SEGUIMIENTO',
-    title: 'Sistema de Progreso Personal — Semana por Semana',
+    title: 'Sistema de Progreso Personal. Semana por Semana.',
     body: 'Una hoja de seguimiento para que puedas ver lo que va cambiando: energía, digestión, pesadez, sueño. No dependés de nadie más para saber si el protocolo está funcionando en tu cuerpo.',
     highlight: 'Vos medís. Vos ves. Nadie lo hace por vos.',
   },
@@ -52,16 +51,14 @@ export const WhatYouGetSection = () => (
             LO QUE RECIBÍS
           </span>
           <h2 className="font-editorial text-3xl md:text-5xl font-bold text-[#1A1A1A] leading-tight mb-4">
-            Un sistema diseñado para{' '}
-            <span className="font-drama text-[#2E4036]">personas que ya intentaron todo</span>
-            {' '}sin un plan real.
+            Un sistema para personas que ya intentaron todo
+            {' '}<span className="font-drama text-[#2E4036]">sin un plan real.</span>
           </h2>
           <p className="text-base text-[#6B7260] font-light max-w-2xl">
             El Protocolo NATURALE no es una dieta. Es un sistema de combinaciones alimentarias
             que reduce la sobrecarga hepática. Cada parte está pensada para que puedas aplicarlo
             en el día a día real, no en condiciones ideales.
           </p>
-          {/* Mecanismo único — named and credible */}
           <div className="mt-5 inline-flex items-center gap-2.5 bg-[#2E4036]/8 border border-[#2E4036]/18 rounded-xl px-4 py-2.5">
             <Leaf size={14} className="text-[#2E4036] shrink-0" />
             <span className="font-mono-data text-[11px] font-semibold text-[#2E4036] uppercase tracking-wider">
@@ -71,7 +68,6 @@ export const WhatYouGetSection = () => (
         </div>
       </ScrollReveal>
 
-      {/* Dopamine loop: cada card revela mais */}
       <div className="space-y-4 mb-12">
         {items.map((item, idx) => {
           const Icon = item.icon;
@@ -105,12 +101,12 @@ export const WhatYouGetSection = () => (
       <ScrollReveal delay={200}>
         <div className="text-center">
           <button
-            onClick={scrollToOffer}
+            onClick={openCheckoutModal}
             className="btn-press btn-shine btn-magnetic group relative overflow-hidden bg-[#CC5833] text-white px-8 py-4 rounded-2xl font-black text-base uppercase tracking-wide inline-flex items-center gap-3 cta-pulse"
           >
             <span className="btn-bg bg-[#A84428] rounded-2xl" />
             <span className="relative z-10 flex items-center gap-3">
-              VER LA OFERTA COMPLETA <ArrowRight size={18} />
+              QUIERO EL PROTOCOLO AHORA <ArrowRight size={18} />
             </span>
           </button>
         </div>

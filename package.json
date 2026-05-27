@@ -1,8 +1,8 @@
 {
-  "name": "paginas-naturale",
+  "name": "naturale-landing",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm install --prefix pasta1 && npm run build --prefix pasta1 && npm install --prefix pasta2 && npm run build --prefix pasta2 && npm install --prefix pasta3 && npm run build --prefix pasta3 && npm install --prefix pasta4 && npm run build --prefix pasta4 && node merge-dist.js"
+    "build": "npm install --prefix pasta3 && npm run build --prefix pasta3 && node merge-dist.js"
   }
 }

@@ -8,7 +8,7 @@ export const OfferPricingSection = () => (
     <div className="noise-bg" aria-hidden="true" />
     <div className="container mx-auto px-5 max-w-3xl relative z-10">
 
-      {/* Sunk cost: já chegou até aqui */}
+      {/* Sunk cost */}
       <ScrollReveal>
         <div className="mb-10">
           <span className="font-mono-data text-[10px] font-medium uppercase tracking-[0.25em] text-[#CC5833]/70 mb-4 block">
@@ -26,7 +26,7 @@ export const OfferPricingSection = () => (
         </div>
       </ScrollReveal>
 
-      {/* Double bind — presentar as duas opções como escolhas */}
+      {/* Double bind */}
       <ScrollReveal delay={100}>
         <div className="mb-10 rounded-2xl border border-white/8 bg-white/[0.03] p-6 md:p-8">
           <p className="font-mono-data text-[10px] font-medium uppercase tracking-widest text-white/30 mb-5">
@@ -49,7 +49,7 @@ export const OfferPricingSection = () => (
                 <p className="text-sm font-semibold text-[#CC5833] mb-1">Hoy, con $17.99, tenés un plan claro</p>
                 <p className="text-sm text-white/50 font-light leading-relaxed">
                   28 días organizados. Comida real. Lista del supermercado. Sin improvisar cada mañana.
-                  Y si en 30 días no notás ninguna mejora — el dinero vuelve, sin preguntas.
+                  Y si en 30 días no notás ninguna mejora, el dinero vuelve. Sin preguntas.
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export const OfferPricingSection = () => (
         </div>
       </ScrollReveal>
 
-      {/* Hyperbolic discounting: costo de no actuar vs precio */}
+      {/* Hyperbolic discounting */}
       <ScrollReveal delay={150}>
         <div className="space-y-3 mb-10">
           {[
@@ -80,10 +80,9 @@ export const OfferPricingSection = () => (
       <ScrollReveal delay={200}>
         <div className="rounded-2xl border border-[#CC5833]/35 shadow-[0_12px_48px_rgba(204,88,51,0.18)] p-7 md:p-10 text-center mb-8">
 
-          {/* Future pacing */}
           <p className="text-white/50 text-sm font-light italic leading-relaxed mb-5 max-w-md mx-auto">
             En 28 días, si seguís el protocolo, vas a saber exactamente qué comiste,
-            cuándo y por qué. Y tu cuerpo va a empezar a responder.
+            cuándo y por qué. Tu cuerpo va a empezar a responder.
           </p>
 
           <p className="font-mono-data text-[10px] font-medium uppercase tracking-widest text-white/30 mb-1">
@@ -117,7 +116,7 @@ export const OfferPricingSection = () => (
           >
             <span className="btn-bg bg-[#A84428] rounded-2xl" />
             <span className="relative z-10 flex items-center gap-3">
-              QUIERO MI PLAN AHORA — $17.99
+              QUIERO MI PLAN AHORA · $17.99
               <ArrowRight size={22} />
             </span>
           </button>
