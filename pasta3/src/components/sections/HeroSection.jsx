@@ -12,12 +12,12 @@ export const HeroSection = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      tl.from('.hero-eyebrow', { y: 40, opacity: 0, duration: 0.9 })
-        .from('.hero-h1-sans', { y: 50, opacity: 0, duration: 1.1, stagger: 0.08 }, '-=0.5')
-        .from('.hero-h1-drama', { y: 55, opacity: 0, duration: 1.2 }, '-=0.9')
-        .from('.hero-desc', { y: 30, opacity: 0, duration: 0.9 }, '-=0.6')
-        .from('.hero-meta > *', { y: 20, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.5')
-        .from('.hero-cta', { y: 20, opacity: 0, duration: 0.7 }, '-=0.3');
+      tl.from('.hero-eyebrow',    { y: 40, opacity: 0, duration: 0.9 })
+        .from('.hero-h1-line',    { y: 50, opacity: 0, duration: 1.0, stagger: 0.1 }, '-=0.5')
+        .from('.hero-desc',       { y: 30, opacity: 0, duration: 0.9 }, '-=0.6')
+        .from('.hero-story',      { y: 25, opacity: 0, duration: 0.8 }, '-=0.5')
+        .from('.hero-meta > *',   { y: 20, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.4')
+        .from('.hero-cta',        { y: 20, opacity: 0, duration: 0.7 }, '-=0.3');
     }, sectionRef);
 
     return () => ctx.revert();
@@ -28,7 +28,7 @@ export const HeroSection = () => {
       ref={sectionRef}
       className="relative min-h-[100dvh] flex flex-col justify-end overflow-hidden"
     >
-      {/* Background image */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://raw.githubusercontent.com/nevertonnoronha-commits/naturale-images/main/image-15.webp"
@@ -37,43 +37,58 @@ export const HeroSection = () => {
           fetchpriority="high"
           className="w-full h-full object-cover"
         />
-        {/* Gradient layering: moss tones → deep charcoal */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/98 via-[#2E4036]/55 to-[#2E4036]/15" />
-        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/98 via-[#2E4036]/60 to-[#2E4036]/20" />
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/75 to-transparent" />
       </div>
-
-      {/* Noise texture (GEMINI spec — 0.05 opacity) */}
       <div className="noise-bg z-[2]" aria-hidden="true" />
 
-      {/* Content — bottom-left third (GEMINI spec) */}
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-5 max-w-3xl pb-16 md:pb-24 pt-28">
 
-        {/* Pre-headline chip */}
+        {/* Priming chip — frame mental antes da headline */}
         <div className="hero-eyebrow mb-7">
           <span className="font-mono-data inline-flex items-center border border-white/20 bg-white/[0.06] backdrop-blur-sm text-white/65 text-[10px] uppercase tracking-[0.2em] px-3.5 py-2 rounded-full">
-            Para personas de +40 años · Hígado graso · Protocolo 28 días
+            Protocolo clínico · Nutrición hepática · 28 días
           </span>
         </div>
 
-        {/* H1 — GEMINI spec: bold sans + massive serif italic (3–5x size ratio) */}
-        <h1 className="mb-7 leading-[1.03]">
-          <span className="hero-h1-sans block font-bold text-[clamp(1.75rem,4.5vw,3rem)] text-white/85 mb-0.5">
-            Si te diagnosticaron
+        {/* H1 — Kishotenketsu: empezamos con síntoma, no con diagnóstico */}
+        <h1 className="mb-6 leading-[1.03]">
+          <span className="hero-h1-line block font-bold text-[clamp(1.6rem,4vw,2.6rem)] text-white/80 mb-1">
+            Ese cansancio que no se va
           </span>
-          <span className="hero-h1-drama block font-drama text-[clamp(3.5rem,10vw,6.5rem)] leading-[0.92] text-[#CC5833]">
-            hígado graso,
+          <span className="hero-h1-line block font-drama text-[clamp(3.2rem,9.5vw,6rem)] leading-[0.9] text-[#CC5833]">
+            puede tener
           </span>
-          <span className="hero-h1-sans block font-bold text-[clamp(1.75rem,4.5vw,3rem)] text-white/85 mt-1">
-            esto es para vos.
+          <span className="hero-h1-line block font-drama text-[clamp(3.2rem,9.5vw,6rem)] leading-[0.9] text-white mb-2">
+            un nombre.
+          </span>
+          <span className="hero-h1-line block font-bold text-[clamp(1.4rem,3.5vw,2.2rem)] text-white/70 mt-2">
+            Y ya existe un plan claro para tratarlo.
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="hero-desc text-base md:text-lg font-light text-white/55 leading-relaxed mb-8 max-w-lg">
-          Destapar el "filtro" de tu cuerpo en{' '}
-          <strong className="font-semibold text-white/85">28 días</strong>
-          {' '}— sin dietas de hambre, sin batidos intomables, con comida real de tu supermercado.
+        {/* Milton Model + Bamum — reconocimiento antes de la propuesta */}
+        <p className="hero-desc text-base md:text-lg font-light text-white/55 leading-relaxed mb-5 max-w-xl">
+          Si tus análisis mostraron enzimas alteradas o te dijeron{' '}
+          <strong className="font-semibold text-white/80">"hígado graso"</strong>
+          {' '}— y el médico no te explicó qué comer mañana por la mañana —
+          este protocolo de{' '}
+          <strong className="font-semibold text-white/80">28 días con comida real de supermercado</strong>
+          {' '}fue creado exactamente para ese momento.
         </p>
+
+        {/* Kishotenketsu — Ten (giro): el médico no dio el paso siguiente */}
+        <div className="hero-story bg-white/[0.05] border border-white/10 rounded-xl px-5 py-4 mb-8 max-w-lg backdrop-blur-sm">
+          <p className="text-sm text-white/45 font-light leading-relaxed italic">
+            "Me dijeron que tenía hígado graso grado 2. La consulta duró 12 minutos.
+            Me fui con una receta y la frase <em className="text-white/60 not-italic font-medium">'cambiá los hábitos'</em>.
+            No sabía por dónde empezar."
+          </p>
+          <p className="font-mono-data text-[10px] text-white/30 uppercase tracking-wider mt-2">
+            Lo que dicen miles de personas antes de encontrar un plan real
+          </p>
+        </div>
 
         {/* Social proof strip */}
         <div className="hero-meta flex flex-wrap items-center gap-5 mb-9">
@@ -103,12 +118,12 @@ export const HeroSection = () => {
           <div className="flex items-center gap-1.5">
             <ShieldCheck size={14} className="text-[#CC5833] shrink-0" strokeWidth={2} />
             <span className="text-xs text-white/45">
-              <strong className="text-white/70 font-semibold">Garantía 30 días</strong> · Riesgo Cero
+              <strong className="text-white/70 font-semibold">Garantía 30 días</strong> · Sin preguntas
             </span>
           </div>
         </div>
 
-        {/* CTA — Magnetic button (GEMINI spec) */}
+        {/* CTA */}
         <div className="hero-cta">
           <button
             onClick={scrollToOffer}
@@ -116,9 +131,12 @@ export const HeroSection = () => {
           >
             <span className="btn-bg bg-[#A84428] rounded-2xl" />
             <span className="relative z-10 flex items-center gap-3">
-              QUIERO EL PROTOCOLO DE 28 DÍAS <ArrowRight size={18} />
+              QUIERO EL PLAN DE 28 DÍAS <ArrowRight size={18} />
             </span>
           </button>
+          <p className="text-[11px] text-white/30 mt-3 font-mono-data tracking-wider uppercase">
+            Acceso inmediato · Pago único · $17.99
+          </p>
         </div>
 
       </div>
