@@ -1,8 +1,0 @@
-{
-  "name": "naturale-landing",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "npm install --prefix pasta3 && npm run build --prefix pasta3 && node merge-dist.js"
-  }
-}
